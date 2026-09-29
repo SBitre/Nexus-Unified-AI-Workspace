@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nexus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Nexus</h1>
+    <p>Unified AI Workspace Assistant</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>Connected Apps</h2>
+
+        <div class="apps">
+            <span>Gmail</span>
+            <span>Calendar</span>
+            <span>Notion</span>
+            <span>Slack</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Ask Nexus</h2>
+        <p>Ask a question about your connected apps.</p>
+
+        <input type="text" id="question" placeholder="What is due this week?">
+
+        <button id="voiceButton">🎤</button>
+        <button id="askButton">Ask</button>
+
+        <div class="examples">
+            <p>Example questions:</p>
+            <button class="exampleButton">What is due this week?</button>
+            <button class="exampleButton">Do I have any meetings today?</button>
+        </div>
+
+        <div id="result">
+            <p id="answer">Your result will appear here.</p>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

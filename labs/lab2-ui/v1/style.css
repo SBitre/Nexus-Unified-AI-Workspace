@@ -1,0 +1,58 @@
+body {
+    font-family: Arial;
+    margin: 40px;
+    background-color: #f4f6f8;
+}
+
+header {
+    background-color: #e9eef3;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+main {
+    max-width: 700px;
+}
+
+section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.apps span {
+    display: inline-block;
+    background-color: #eef2f5;
+    padding: 8px 12px;
+    margin-right: 8px;
+    border-radius: 5px;
+}
+
+input {
+    padding: 10px;
+    width: 300px;
+}
+
+button {
+    padding: 10px 12px;
+    cursor: pointer;
+}
+
+.examples {
+    margin-top: 20px;
+}
+
+.exampleButton {
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #666;
+}
