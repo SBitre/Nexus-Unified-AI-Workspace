@@ -142,8 +142,7 @@ def initialise() -> None:
     with connect() as connection:
         if using_supabase():
             with connection.cursor() as cursor:
-                for statement in [s.strip() for s in script.split(";") if s.strip()]:
-                    cursor.execute(statement)
+                                cursor.execute(script)
         else:
             connection.executescript(script)
 
