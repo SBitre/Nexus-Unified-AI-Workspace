@@ -1,0 +1,9 @@
+# Nexus — Version 4 backend dependencies
+#
+# The application, data access and database tiers use only the Python
+# standard library when running on SQLite. FastAPI serves the API, and
+# psycopg is needed only for the Supabase (PostgreSQL) backend.
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.6
+pydantic>=2.9.2
+psycopg[binary]>=3.2.10

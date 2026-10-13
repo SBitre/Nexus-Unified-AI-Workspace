@@ -1,0 +1,18 @@
+[
+  {
+    "item_id": "evt-301",
+    "title": "Design Sync with Product Team",
+    "due": "2026-09-29T10:30:00",
+    "priority": "medium",
+    "url": "https://calendar.example.com/evt-301",
+    "extra": { "ends": "2026-09-29T11:30:00", "attendees": ["sarah.lin@example.com", "you@example.com"], "location": "Room 4B" }
+  },
+  {
+    "item_id": "evt-318",
+    "title": "Weekly Standup & Retrospective",
+    "due": "2026-10-02T16:00:00",
+    "priority": "low",
+    "url": "https://calendar.example.com/evt-318",
+    "extra": { "ends": "2026-10-02T17:00:00", "attendees": ["team@example.com"], "location": "Online" }
+  }
+]

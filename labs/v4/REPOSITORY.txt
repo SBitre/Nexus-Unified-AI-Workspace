@@ -1,0 +1,9 @@
+Nexus — Unified AI Workspace Assistant
+Repository: https://github.com/SBitre/Nexus-Unified-AI-Workspace
+
+The Version 4 codebase in this folder is held under
+labs/lab4-database/ in the repository. Commit history shows the
+division of work between team members.
+
+Note: the repository is currently private while the project is in
+development. Access can be granted on request.

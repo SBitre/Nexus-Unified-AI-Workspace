@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 0 1134 700" width="1134" height="700" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="many" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto">
+      <path d="M 1 1 L 11 6 L 1 11" stroke="#475569" stroke-width="1.5" fill="none"/>
+    </marker>
+  </defs>
+
+  <rect x="-14" width="1134" height="700" fill="#ffffff"/>
+  <text x="36" y="40" font-size="22" font-weight="700" fill="#1f2937">Nexus — Version 4 Database Schema</text>
+  <text x="36" y="62" font-size="12.5" fill="#6b7280">PostgreSQL on Supabase. Crow's foot notation: one user has many of everything below.</text>
+
+  <!-- USERS -->
+  <rect x="36" y="88" width="286" height="126" rx="8" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.8"/>
+  <path d="M 36 96 a 8 8 0 0 1 8 -8 h 270 a 8 8 0 0 1 8 8 v 22 h -286 z" fill="#4f46e5"/>
+  <text x="50" y="109" font-size="13.5" font-weight="700" fill="#ffffff">users</text>
+  <text x="50" y="140" font-size="11.8" fill="#1e1b4b" font-weight="700">PK  id</text>
+  <text x="50" y="161" font-size="11.8" fill="#312e81">UQ  email</text>
+  <text x="50" y="182" font-size="11.8" fill="#312e81">      display_name</text>
+  <text x="50" y="203" font-size="11.8" fill="#312e81">      created_at</text>
+
+  <!-- WORK ITEMS -->
+  <rect x="412" y="88" width="300" height="320" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="2.2"/>
+  <path d="M 412 96 a 8 8 0 0 1 8 -8 h 284 a 8 8 0 0 1 8 8 v 22 h -300 z" fill="#059669"/>
+  <text x="426" y="109" font-size="13.5" font-weight="700" fill="#ffffff">work_items</text>
+  <text x="426" y="140" font-size="11.8" fill="#064e3b" font-weight="700">PK  id</text>
+  <text x="426" y="161" font-size="11.8" fill="#065f46" font-weight="700">FK  user_id</text>
+  <text x="426" y="182" font-size="11.8" fill="#065f46">      source</text>
+  <text x="426" y="203" font-size="11.8" fill="#065f46">      external_id</text>
+  <text x="426" y="224" font-size="11.8" fill="#065f46">      title</text>
+  <text x="426" y="245" font-size="11.8" fill="#065f46">      notes</text>
+  <text x="426" y="266" font-size="11.8" fill="#065f46">      due_at</text>
+  <text x="426" y="287" font-size="11.8" fill="#065f46">      priority  <tspan fill="#6b9e8c">high | medium | low</tspan></text>
+  <text x="426" y="308" font-size="11.8" fill="#065f46">      status    <tspan fill="#6b9e8c">open | done | archived</tspan></text>
+  <text x="426" y="329" font-size="11.8" fill="#065f46">      url</text>
+  <text x="426" y="350" font-size="11.8" fill="#065f46">      extra  <tspan fill="#6b9e8c">jsonb</tspan></text>
+  <text x="426" y="371" font-size="11.8" fill="#065f46">      created_at · updated_at</text>
+  <line x1="426" y1="381" x2="698" y2="381" stroke="#a7f3d0"/>
+  <text x="426" y="398" font-size="10.6" fill="#047857">UQ (user_id, source, external_id) — re-sync upserts</text>
+
+  <!-- OAUTH TOKENS -->
+  <rect x="36" y="250" width="286" height="150" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.8"/>
+  <path d="M 36 258 a 8 8 0 0 1 8 -8 h 270 a 8 8 0 0 1 8 8 v 22 h -286 z" fill="#dc2626"/>
+  <text x="50" y="271" font-size="13.5" font-weight="700" fill="#ffffff">oauth_tokens</text>
+  <text x="50" y="302" font-size="11.8" fill="#7f1d1d" font-weight="700">PK  id</text>
+  <text x="50" y="323" font-size="11.8" fill="#991b1b" font-weight="700">FK  user_id</text>
+  <text x="50" y="344" font-size="11.8" fill="#991b1b">      service</text>
+  <text x="50" y="365" font-size="11.8" fill="#991b1b">      access_token · refresh_token</text>
+  <text x="50" y="386" font-size="11.8" fill="#991b1b">      expires_at · scopes · updated_at</text>
+  <text x="50" y="416" font-size="10.6" fill="#b91c1c">UQ (user_id, service) — one credential per service</text>
+
+  <!-- QUERY HISTORY -->
+  <rect x="36" y="440" width="286" height="172" rx="8" fill="#fdf2f8" stroke="#db2777" stroke-width="1.8"/>
+  <path d="M 36 448 a 8 8 0 0 1 8 -8 h 270 a 8 8 0 0 1 8 8 v 22 h -286 z" fill="#db2777"/>
+  <text x="50" y="461" font-size="13.5" font-weight="700" fill="#ffffff">query_history</text>
+  <text x="50" y="492" font-size="11.8" fill="#831843" font-weight="700">PK  id</text>
+  <text x="50" y="513" font-size="11.8" fill="#9d174d" font-weight="700">FK  user_id  <tspan fill="#c47ba0" font-weight="400">nullable</tspan></text>
+  <text x="50" y="534" font-size="11.8" fill="#9d174d">      asked_at · question</text>
+  <text x="50" y="555" font-size="11.8" fill="#9d174d">      intent · parsed_by</text>
+  <text x="50" y="576" font-size="11.8" fill="#9d174d">      sources_used · cache_hits</text>
+  <text x="50" y="597" font-size="11.8" fill="#9d174d">      item_count · duration_ms</text>
+
+  <!-- RESPONSE CACHE -->
+  <rect x="412" y="440" width="300" height="140" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+  <path d="M 412 448 a 8 8 0 0 1 8 -8 h 284 a 8 8 0 0 1 8 8 v 22 h -300 z" fill="#d97706"/>
+  <text x="426" y="461" font-size="13.5" font-weight="700" fill="#ffffff">response_cache</text>
+  <text x="426" y="492" font-size="11.8" fill="#78350f" font-weight="700">PK  cache_key</text>
+  <text x="426" y="513" font-size="11.8" fill="#92400e">      service</text>
+  <text x="426" y="534" font-size="11.8" fill="#92400e">      payload</text>
+  <text x="426" y="555" font-size="11.8" fill="#92400e">      stored_at · expires_at</text>
+  <text x="426" y="574" font-size="10.6" fill="#b45309">No FK — keyed by service and date window, not by user</text>
+
+  <!-- PREFERENCES -->
+  <rect x="802" y="440" width="282" height="118" rx="8" fill="#f1f5f9" stroke="#475569" stroke-width="1.8"/>
+  <path d="M 802 448 a 8 8 0 0 1 8 -8 h 266 a 8 8 0 0 1 8 8 v 22 h -282 z" fill="#475569"/>
+  <text x="816" y="461" font-size="13.5" font-weight="700" fill="#ffffff">preferences</text>
+  <text x="816" y="492" font-size="11.8" fill="#0f172a" font-weight="700">PK  key</text>
+  <text x="816" y="513" font-size="11.8" fill="#334155">      value</text>
+  <text x="816" y="534" font-size="11.8" fill="#334155">      updated_at</text>
+  <text x="816" y="552" font-size="10.6" fill="#64748b">Key/value: a new setting needs no migration</text>
+
+  <!-- Relationships -->
+  <line x1="322" y1="150" x2="412" y2="161" stroke="#475569" stroke-width="1.8" marker-end="url(#many)"/>
+  <text x="330" y="142" font-size="10.6" fill="#475569">1 : N</text>
+
+  <line x1="179" y1="214" x2="179" y2="250" stroke="#475569" stroke-width="1.8" marker-end="url(#many)"/>
+  <text x="188" y="238" font-size="10.6" fill="#475569">1 : N</text>
+
+  <polyline points="36,186 18,186 18,506 36,506" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#many)"/>
+  <text x="24" y="350" font-size="10.6" fill="#475569" transform="rotate(-90 24 350)">1 : N</text>
+
+  <!-- Notes -->
+  <rect x="802" y="88" width="282" height="320" rx="8" fill="#fafafa" stroke="#cbd5e1" stroke-width="1.4"/>
+  <text x="816" y="114" font-size="12.5" font-weight="700" fill="#334155">Design notes</text>
+  <text x="816" y="140" font-size="11" fill="#475569">An item is either synced from a</text>
+  <text x="816" y="158" font-size="11" fill="#475569">service — source names the plugin,</text>
+  <text x="816" y="176" font-size="11" fill="#475569">external_id is that service's own id —</text>
+  <text x="816" y="194" font-size="11" fill="#475569">or created in Nexus, where source is</text>
+  <text x="816" y="212" font-size="11" fill="#475569">'nexus' and external_id is null.</text>
+
+  <text x="816" y="244" font-size="11" fill="#475569">A sync updates the provider's fields</text>
+  <text x="816" y="262" font-size="11" fill="#475569">and leaves status alone, so an item</text>
+  <text x="816" y="280" font-size="11" fill="#475569">the user marked done stays done.</text>
+
+  <text x="816" y="312" font-size="11" fill="#475569">CHECK constraints on priority and</text>
+  <text x="816" y="330" font-size="11" fill="#475569">status keep invalid values out even</text>
+  <text x="816" y="348" font-size="11" fill="#475569">if a caller skips validation.</text>
+
+  <text x="816" y="380" font-size="11" fill="#475569">Indexes: (user_id, due_at),</text>
+  <text x="816" y="398" font-size="11" fill="#475569">(user_id, status), (user_id, source).</text>
+</svg>

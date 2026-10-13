@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Nexus — a unified AI workspace assistant that answers questions across Gmail, Calendar, Notion and Slack from one place.">
+  <title>Nexus — Unified AI Workspace Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="shell">
+
+  <!-- ==================== Sidebar ====================
+       Collapses to icons below 1080px and to a bottom bar below 720px.
+       Every link keeps a title and an aria-label so the destination is
+       still available once the visible text is hidden. -->
+  <nav class="sidebar" aria-label="Workspace navigation">
+    <ul class="nav-list">
+      <li>
+        <a class="nav-link" href="index.html" aria-current="page" aria-label="Home" title="Home">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+          </span>
+          <span class="nav-label">Home</span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" href="#" aria-label="Gmail" title="Gmail">
+          <span class="nav-icon badge-gmail" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </span>
+          <span class="nav-label">Gmail</span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" href="#" aria-label="Calendar" title="Calendar">
+          <span class="nav-icon badge-calendar" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          </span>
+          <span class="nav-label">Calendar</span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" href="#" aria-label="Notion" title="Notion">
+          <span class="nav-icon badge-notion" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8v8l6-8v8"/></svg>
+          </span>
+          <span class="nav-label">Notion</span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" href="#" aria-label="Slack" title="Slack">
+          <span class="nav-icon badge-slack" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v8M15 13v8M3 15h8M13 9h8"/><circle cx="9" cy="15" r="2"/><circle cx="15" cy="9" r="2"/></svg>
+          </span>
+          <span class="nav-label">Slack</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="nav-spacer"></div>
+
+    <ul class="nav-list">
+      <li>
+        <a class="nav-link" href="settings.html" aria-label="Settings" title="Settings">
+          <span class="nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-2.9 1.2V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-2.9-1.2l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15H4.5a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.2-2.9l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 11.5 4.1V4a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 2.9 1.2l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0 1.2 2.9h.07a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></svg>
+          </span>
+          <span class="nav-label">Settings</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ==================== Main ==================== -->
+  <main class="main" id="main">
+
+    <div class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <div>
+          <h1>Nexus</h1>
+          <p>Your Unified AI Workspace Assistant</p>
+        </div>
+      </div>
+      <p class="status-pill"><span class="status-dot" aria-hidden="true"></span>Nexus AI Assistant Active</p>
+    </div>
+
+    <!-- ---------- Home view ---------- -->
+    <div id="home-view">
+      <p class="greeting">Hello, Rhaenyra!</p>
+
+      <div class="home-grid">
+
+        <section class="card ask-card" aria-labelledby="ask-heading">
+          <h2 id="ask-heading">How can I help you today?</h2>
+
+          <form id="ask-form">
+            <div class="ask-row">
+              <span class="ask-spark" aria-hidden="true">&#10022;</span>
+              <label class="sr-only" for="question">Ask Nexus a question about your connected apps</label>
+              <div class="input-wrap">
+                <input id="question" name="question" type="text" autocomplete="off"
+                       placeholder="What is due this week?">
+                <button class="mic-button" id="mic-button" type="button"
+                        aria-label="Ask using your microphone" title="Ask using your microphone">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>
+                </button>
+              </div>
+              <button class="primary-button" type="submit">Ask Nexus</button>
+            </div>
+          </form>
+          <p class="voice-status" id="voice-status" role="status" aria-live="polite"></p>
+
+          <div class="chips">
+            <button class="chip" type="button" data-question="What are my priorities for today?">What are my priorities for today?</button>
+            <button class="chip" type="button" data-question="Find the latest project notes and updates">Find the latest project notes and updates</button>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="snapshot-heading">
+          <h2 class="card-title" id="snapshot-heading">Today&rsquo;s Snapshot</h2>
+          <ul class="snapshot-list">
+            <li class="snapshot-item">
+              <span class="app-badge badge-calendar" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+              </span>
+              <div>
+                <strong>Calendar</strong>
+                <p>10:30 AM &mdash; Design sync with product team</p>
+              </div>
+              <span class="snapshot-meta">Today</span>
+            </li>
+            <li class="snapshot-item">
+              <span class="app-badge badge-gmail" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </span>
+              <div>
+                <strong>Gmail</strong>
+                <p>2 new messages from your team</p>
+              </div>
+              <span class="snapshot-meta">2 unread</span>
+            </li>
+            <li class="snapshot-item">
+              <span class="app-badge badge-notion" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8v8l6-8v8"/></svg>
+              </span>
+              <div>
+                <strong>Notion</strong>
+                <p>Weekly standup notes updated</p>
+              </div>
+              <span class="snapshot-meta">Updated</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card" aria-labelledby="tasks-heading">
+          <div class="items-head">
+            <h2 class="card-title" id="tasks-heading" style="margin:0">Your Tasks</h2>
+            <span class="items-status" id="items-status" role="status" aria-live="polite"></span>
+          </div>
+
+          <!-- CREATE -->
+          <form id="item-form" class="item-form">
+            <div class="item-form-row">
+              <label class="sr-only" for="new-title">Task title</label>
+              <input class="text-input" id="new-title" type="text" required
+                     maxlength="300" placeholder="Add a task&hellip;">
+            </div>
+            <div class="item-form-row item-form-row-split">
+              <span>
+                <label class="field-label" for="new-due">Due</label>
+                <input class="text-input" id="new-due" type="datetime-local">
+              </span>
+              <span>
+                <label class="field-label" for="new-priority">Priority</label>
+                <div class="select-wrap">
+                  <select class="select-input" id="new-priority">
+                    <option value="high">High</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="low">Low</option>
+                  </select>
+                </div>
+              </span>
+              <button class="primary-button" type="submit">Add task</button>
+            </div>
+          </form>
+
+          <div class="items-filters" role="group" aria-label="Filter tasks">
+            <button class="chip" type="button" data-status="open" aria-pressed="true">Open</button>
+            <button class="chip" type="button" data-status="done" aria-pressed="false">Done</button>
+            <button class="chip" type="button" data-status="all" aria-pressed="false">All</button>
+            <button class="chip chip-right" type="button" id="sync-button">Sync connected apps</button>
+          </div>
+
+          <!-- READ, UPDATE and DELETE all happen inside this list -->
+          <ul class="items-list" id="items-list"></ul>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- ---------- Conversation view ----------
+         aria-live announces the assistant's answer to screen reader users
+         when it appears, since it arrives without a page change. -->
+    <div id="conversation-view" class="conversation" hidden aria-live="polite">
+
+      <button class="back-link" type="button" id="back-button">
+        <span aria-hidden="true">&larr;</span> Back to home
+      </button>
+
+      <p class="user-bubble">
+        <span id="asked-question">What is due this week?</span>
+        <span class="user-avatar" aria-hidden="true">R</span>
+      </p>
+
+      <section class="card assistant-card" aria-label="Nexus assistant response">
+        <p class="assistant-label"><span aria-hidden="true">&#10022;</span> Nexus Assistant</p>
+
+        <p class="assistant-summary" id="assistant-summary"></p>
+
+        <h2 class="tasks-heading">This Week&rsquo;s Tasks</h2>
+
+        <ul class="task-list" id="task-list"></ul>
+
+        <p class="trace-line" id="trace-line"></p>
+
+        <div class="actions-block">
+          <p class="actions-label" id="actions-label">Suggested actions</p>
+          <div class="chips" role="group" aria-labelledby="actions-label">
+            <button class="chip" type="button">Reschedule Friday standup</button>
+            <button class="chip" type="button">Mark Notion tasks complete</button>
+            <button class="chip" type="button">Draft reply to Sarah</button>
+          </div>
+        </div>
+      </section>
+
+      <form class="followup" id="followup-form">
+        <div class="ask-row">
+          <label class="sr-only" for="followup-input">Ask a follow-up question</label>
+          <div class="input-wrap">
+            <input id="followup-input" type="text" autocomplete="off"
+                   placeholder="Ask a follow-up or command Nexus&hellip;">
+            <button class="mic-button" id="followup-mic" type="button"
+                    aria-label="Ask a follow-up using your microphone" title="Ask using your microphone">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>
+            </button>
+          </div>
+          <button class="primary-button" type="submit">Ask Nexus</button>
+        </div>
+      </form>
+
+    </div>
+
+  </main>
+</div>
+
+<script src="js/api-client.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

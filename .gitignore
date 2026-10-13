@@ -1,13 +1,8 @@
-.env
-.env.*
-credentials.json
-token.json
-client_secret*.json
-*.pem
 __pycache__/
 *.pyc
-venv/
+*.db
 .venv/
-node_modules/
+venv/
+.env
 .DS_Store
 .vscode/

@@ -1,0 +1,26 @@
+[
+  {
+    "item_id": "msg-8841",
+    "title": "Review contract feedback from Sarah",
+    "due": "2026-09-28T17:00:00",
+    "priority": "high",
+    "url": "https://mail.example.com/msg-8841",
+    "extra": { "sender": "sarah.lin@example.com", "thread_size": 4, "unread": true }
+  },
+  {
+    "item_id": "msg-8902",
+    "title": "Follow up on outstanding team invoices",
+    "due": "2026-09-30T12:00:00",
+    "priority": "medium",
+    "url": "https://mail.example.com/msg-8902",
+    "extra": { "sender": "accounts@example.com", "thread_size": 2, "unread": true }
+  },
+  {
+    "item_id": "msg-8915",
+    "title": "Conference travel approval",
+    "due": "2026-10-03T09:00:00",
+    "priority": "low",
+    "url": "https://mail.example.com/msg-8915",
+    "extra": { "sender": "travel@example.com", "thread_size": 1, "unread": false }
+  }
+]
